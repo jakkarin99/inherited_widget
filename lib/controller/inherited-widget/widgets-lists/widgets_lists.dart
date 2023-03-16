@@ -8,7 +8,8 @@ class EyeColor extends InheritedWidget {
     @required this.color,
     required Widget child,
   })  : assert(color != null),
-        super(key: key, child: child);
+        super(key: key, child: child); //การกำหนด parameter constructor
+  //สำหรับ Inherited widget
 
   final Color? color;
 
@@ -71,7 +72,7 @@ Widget _childrenList(Color? eyeColor) => Column(
         const SizedBox(
           height: 5.0,
         ),
-        FatherClass(),
+        const FatherClass(),
       ],
     );
 
@@ -85,8 +86,8 @@ class FatherClass extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            margin: EdgeInsets.all(10.0),
-            padding: EdgeInsets.all(5.0),
+            margin: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(5.0),
             child: Text(
               'I am the father, and I was born with blue eyes. I have a son.',
               style: TextStyle(
@@ -97,7 +98,7 @@ class FatherClass extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-          SonClass(),
+          const SonClass(),
         ],
       ),
     );

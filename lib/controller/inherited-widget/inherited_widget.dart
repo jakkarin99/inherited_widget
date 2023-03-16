@@ -1,5 +1,3 @@
-// ignore_for_file: library_private_types_in_public_api
-
 import 'package:flutter/material.dart';
 import 'widgets-lists/widgets_lists.dart';
 
@@ -7,6 +5,7 @@ class InheritedWidgetPage extends StatefulWidget {
   const InheritedWidgetPage({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _InheritedWidgetPageState createState() => _InheritedWidgetPageState();
 }
 
@@ -31,7 +30,7 @@ class _InheritedWidgetPageState extends State<InheritedWidgetPage> {
         EyeColor(
           color: Colors.lightBlue,
           child: Builder(builder: (BuildContext innerContext) {
-            return GrandParent();
+            return const GrandParent();
           }),
         ),
         const SizedBox(
